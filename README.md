@@ -9,3 +9,5 @@
     <li>Water Jug Problem (16)</li>
     <li>Tic Tac Toe (17,18)</li>
 </ol>
+
+![image](https://github.com/Alroy05/ai-pracs/assets/112317470/33114e74-cceb-426f-8231-0e3bd556556e)
