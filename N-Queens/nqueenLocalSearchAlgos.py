@@ -14,7 +14,7 @@ def num_attacks(state):
                 attacks += 1
     return attacks
 
-def hill_climbing(N, max_iter=1000):
+def hill_climbing(N, max_iter=1000000):
     """Hill-climbing algorithm to solve N-Queens problem."""
     current_state = initial_state(N)
     current_attacks = num_attacks(current_state)
@@ -41,12 +41,12 @@ def print_solution(solution):
     if solution is None:
         print("Failed to find a solution.")
     else:
-        for row in solution:
-            print(" ".join('Q' if col == row_index else '.' for col in range(len(solution))))
-            row_index += 1
+        for row_index, row in enumerate(solution):
+            print(" ".join('Q' if col == row else '.' for col in range(len(solution))))
+
 
 if __name__ == "__main__":
-    N = 8  # Change N for different board sizes
+    N = 4  # Change N for different board sizes
     solution = hill_climbing(N)
     print("Solution:")
     print_solution(solution)
